@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Dec 26 19:01:17 2021
+
+@author: zhdanov
+"""
+
+import os
+from scipy.io import wavfile
+
+def find_duplicates(your_path):
+    # определение текущей рабочей директории
+    path = your_path    
+    # чтение записей
+    with os.scandir(path) as listOfEntries:  
+        for entry in listOfEntries:
+            # проверка вхождения подстроки в строку и печать всех записей, являющихся файлами 
+            if entry.is_file():            
+                samplerate, data= wavfile.read(entry.name)
+        
+            
