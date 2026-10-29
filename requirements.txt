@@ -1,6 +1,0 @@
-scipy
-matplotlib
-numpy
-python_speech_features
-scikit-learn
-hmmlearn
